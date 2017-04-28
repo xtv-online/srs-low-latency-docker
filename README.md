@@ -23,3 +23,28 @@ The logs can be viewed using:
 ```
 docker-compose logs
 ```
+
+# Usage
+The container exposes port 1935 (the RMTP port). Streams can be created using an RTMP streaming encoder such as [OBS](https://obsproject.com/) or FMLE. The stream should have the following settings:
+
+```
+rtmp://<address>/live/<stream_key>
+```
+
+Where ```<address>``` is the server IP or domain name and ```<stream_key>``` is the stream key for the encoder. For example:
+
+```
+rtmp://live.xtv.co.uk/live/corn_exchange
+```
+
+This stream can then be accessed using [VLC](http://www.videolan.org/vlc/) media player by opening a network stream with the following settings:
+
+```
+rtmp://<address>/live/<stream_key> :network-caching=0
+```
+
+Here the the final part of the address disables VLC caching the incoming stream, minimising latency. Using the previous example:
+
+```
+rtmp://live.xtv.co.uk/live/corn_exchange :network-caching=0
+```
