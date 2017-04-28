@@ -25,7 +25,7 @@ docker-compose logs
 ```
 
 # Usage
-The container exposes port 1935 (the RMTP port). Streams can be created using an RTMP streaming encoder such as [OBS](https://obsproject.com/) or FMLE. The stream should have the following settings:
+The container exposes port 1935 (the RMTP port). Streams can be created using an RTMP streaming encoder such as [OBS](https://obsproject.com/), [FMLE](https://offers.adobe.com/en/na/leap/landings/fmle3.html) or [Teradek Live:Air Solo](https://itunes.apple.com/us/app/live-air-solo-stream-live/id1051147032?mt=8). The stream should have the following settings:
 
 ```
 rtmp://<address>/live/<stream_key>
