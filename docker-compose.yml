@@ -1,0 +1,8 @@
+version: "2"
+
+services:
+  srs-low-latency:
+    build: .
+    container_name: srs-low-latency
+    ports:
+      - "1935:1935"
