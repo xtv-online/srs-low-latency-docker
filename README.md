@@ -1,3 +1,6 @@
 # Docker Container for SRS Low Latency Build
 
-Run with ```docker-compose up -d```
+```
+docker-compose build
+docker-compose up -d
+```

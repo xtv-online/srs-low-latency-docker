@@ -12,9 +12,9 @@ RUN git pull
 # Build SRS
 RUN ./configure --disable-all --with-ssl && make
 
-# Run SRS Node
-RUN ./objs/srs -c conf/realtime.conf
-
 # Expose ports.
 #   - 1935 - SRS RTMP Port
 EXPOSE 1935
+
+# Run SRS Node
+CMD ["/srs/trunk/objs/srs", "-c", "/srs/trunk/conf/realtime.conf"]
