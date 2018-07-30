@@ -2,7 +2,7 @@
 FROM ubuntu:xenial
 
 # Install Git
-RUN apt-get update && apt-get install -y git sudo
+RUN apt-get update && apt-get install --allow git sudo python
 
 # Download SRS
 RUN git clone https://github.com/ossrs/srs
