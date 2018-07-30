@@ -10,7 +10,7 @@ WORKDIR srs/trunk
 RUN git pull
 
 # Build SRS
-RUN ./configure --disable-all --with-ssl && make
+RUN ./configure && make
 
 # Expose ports.
 #   - 1935 - SRS RTMP Port
