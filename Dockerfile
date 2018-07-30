@@ -1,5 +1,5 @@
 # Pull base image.
-FROM ubuntu
+FROM ubuntu:xenial
 
 # Install Git
 RUN apt-get update && apt-get install -y git sudo
